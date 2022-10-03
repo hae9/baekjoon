@@ -1,8 +1,9 @@
 //시간초과
 
-const input = require('fs').readFileSync(0).toString().trim().split('\n');
+let input = require('fs').readFileSync('input.txt').toString().trim().split('\n');
 
 let arr = [];
+result = '';
 
 for (i = 1; i <= input[0]; i++) {
   let arr = input[i].split(' ');
@@ -12,10 +13,6 @@ for (i = 1; i <= input[0]; i++) {
 
 //제출 정답
 
-const input = require('fs').readFileSync(0).toString().trim().split('\n');
-
-let arr = [];
-let result = '';
 
 for (i = 1; i <= input[0]; i++) {
   let arr = input[i].split(' ');
