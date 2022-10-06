@@ -1,13 +1,24 @@
-const input = require('fs').readFileSync('input.txt').toString()
+const N = require('fs').readFileSync('input.txt').toString()
 
 function plus (x) {
-  let a = parseInt(x / 10)
+  let a = parseInt(x/10)
   let b = x % 10
   let c = a + b
-  console.log(toString(b)+toString(c)) 
+  return(b.toString()+(c % 10).toString()) 
 }
-plus(26)
 
+let res = plus(N)
+// console.log(plus(05))
+let i = 1
+while (parseInt(N) !== parseInt(res)) {
+  i += 1
+  res =  plus (res)
+
+}
+console.log(i)
+
+// const c = parseInt(input/10)+input%10
+// console.log((input%10).toString()+c)
 // const a = ten(input)
 // const b = one(input)
 // let c = ten(input) + one(input)
