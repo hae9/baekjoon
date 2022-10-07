@@ -8,8 +8,8 @@ function plus (x) {
 }
 
 let res = plus(N)
-// console.log(plus(05))
 let i = 1
+
 while (parseInt(N) !== parseInt(res)) {
   i += 1
   res =  plus (res)
