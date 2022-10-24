@@ -1,17 +1,19 @@
 const input = require('fs').readFileSync('input.txt').toString().split('\n');
-// console.log(input[0]);
-// console.log(input);
-for (let i = 1; i <= input[0]; i += 1) {
-  let arr = input[i].split(' ');
-  // console.log(arr);
-  let sum = 0;
-  for (let j = 1; j <= arr[0]; j += 1) {
-    sum += Number(arr[j]);
-  }
-  // console.log(sum);
-  let average = Number(sum / arr[0]);
-  // console.log(average);
-  let res = arr.filter((elem) => elem > average);
-  // console.log(res);
-  console.log(`${((res.length / arr[0]) * 100).toFixed(3)}%`);
+let num = Number(input[0]);
+
+for (let i = 1; i <= num; i += 1) {
+  let arr = input[i]
+    .trim()
+    .split(' ')
+    .map((ele) => Number(ele));
+  let testCase = Number(arr.shift());
+  console.log(arr);
+  console.log(testCase);
+  let avg = arr.reduce((prev, cur) => prev + cur, 0);
+  avg = avg / testCase;
+  console.log(avg);
+  const res = arr.filter((elem) => elem > avg);
+
+  const result = ((res.length / testCase) * 100).toFixed(3);
+  console.log(result + '%');
 }
