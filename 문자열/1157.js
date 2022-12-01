@@ -1,7 +1,7 @@
 const { format } = require('path');
 
 const filePath = process.platform === 'linux' ? 0 : 'input.txt';
-const input = require('fs').readFileSync(filePath).toString();
+const input = require('fs').readFileSync(filePath).toString().trim();
 const str = input.toUpperCase();
 
 const res = {};
@@ -27,7 +27,7 @@ for (const key in res) {
 let result = '';
 if (resKey.length === 1) {
   result = resKey[0];
-} else if (resKey.length > 1) {
+} else {
   result = '?';
 }
 console.log(result);
