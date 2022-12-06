@@ -1,4 +1,4 @@
 3
-happy
-new
-year
+3 7
+15 7
+5 2
